@@ -14,13 +14,16 @@ class NotesView extends StatelessWidget {
         title: const Text('Notes App'),
         actions: const [
           Padding(
-            padding:EdgeInsets.only(top: 8.0, bottom: 8.0, right: 16),
+            padding: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 16),
             child: CustomSearchIcon(),
           ),
         ],
       ),
-  body: NotesViewBody(),
+      body: const NotesViewBody(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
-
