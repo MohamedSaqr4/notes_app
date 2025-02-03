@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/constants.dart';
 import 'package:note_app/views/widgets/AddNoteBottomSheet.dart';
 import 'package:note_app/views/widgets/CustomSearchIcon.dart';
 import 'package:note_app/views/widgets/NotesViewBody.dart';
@@ -22,6 +23,7 @@ class NotesView extends StatelessWidget {
       ),
       body: const NotesViewBody(),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: kPrimryColor,
         onPressed: () {
           showModalBottomSheet(
             context: context,

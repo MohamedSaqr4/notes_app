@@ -4,14 +4,19 @@ import 'package:note_app/constants.dart';
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
+    required this.hint,
+    this.maxLines = 1,
   });
 
+  final String hint;
+  final int maxLines;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      maxLines: maxLines,
       cursorColor: kPrimryColor, //  color of ----> |
       decoration: InputDecoration(
-        hintText: 'Title',
+        hintText: hint,
         hintStyle: const TextStyle(color: kPrimryColor),
         border: BuildBorder(),
         enabledBorder: BuildBorder(),
@@ -25,8 +30,8 @@ class CustomTextField extends StatelessWidget {
       borderRadius: BorderRadius.circular(16),
       borderSide: BorderSide(
         color: color ?? Colors.white,
+        //Color in border side if color send هيساوية ,dont send check by ?? meaning if color = null thats meaning dont send then will be = white
       ),
     );
-    //Color in border side if color send هيساوية dont send check by ?? if = null thats meaning dont send then will ne = white
   }
 }
