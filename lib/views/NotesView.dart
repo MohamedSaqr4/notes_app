@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/views/widgets/AddNoteBottomSheet.dart';
 import 'package:note_app/views/widgets/CustomSearchIcon.dart';
 import 'package:note_app/views/widgets/NotesViewBody.dart';
 
@@ -21,9 +22,17 @@ class NotesView extends StatelessWidget {
       ),
       body: const NotesViewBody(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return const AddNoteBottomSheet();
+            },
+          );
+        },
         child: const Icon(Icons.add),
       ),
     );
   }
 }
+
