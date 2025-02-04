@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/constants.dart';
 import 'package:note_app/views/widgets/AddNoteBottomSheet.dart';
-import 'package:note_app/views/widgets/CustomSearchIcon.dart';
+import 'package:note_app/views/widgets/CustomIcon.dart';
 import 'package:note_app/views/widgets/NotesViewBody.dart';
 
 class NotesView extends StatelessWidget {
@@ -13,11 +13,11 @@ class NotesView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xff303030),
         elevation: 0,
-        title: const Text('Notes App'),
+        title: const Text('Notes'),
         actions: const [
           Padding(
             padding: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 16),
-            child: CustomSearchIcon(),
+            child: CustomIcon(icon: Icon(Icons.search)),
           ),
         ],
       ),
