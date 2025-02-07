@@ -4,7 +4,7 @@ import 'package:note_app/views/widgets/CustomTiextField.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
   const AddNoteBottomSheet({
-    super.key,
+    super.key
   });
 
   @override
