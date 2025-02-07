@@ -19,6 +19,8 @@ class CustomTextField extends StatelessWidget {
       validator: (value) {
         if (value?.isEmpty ?? true) {
           return ('Field Is Required');
+        } else {
+          return null;
         }
       },
       maxLines: maxLines,
