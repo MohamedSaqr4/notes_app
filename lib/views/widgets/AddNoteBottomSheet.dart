@@ -1,5 +1,4 @@
-import 'dart:html';
-
+ 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -21,12 +20,12 @@ class AddNoteBottomSheet extends StatelessWidget {
             }
 
             if (state is AddNoteFailure) {
-              print('failed ${state.errMessaagr}');
+              print('failed ${state.errMessaage}');
             }
           },
           builder: (context, state) {
             return ModalProgressHUD(
-                inAsyncCall: state is AddNoteLoadin ? true : false,
+                inAsyncCall: state is AddNoteLoading ? true : false,
                 child: const AddNoteForm());
           },
         ),
