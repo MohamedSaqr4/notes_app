@@ -11,36 +11,33 @@ class NotesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color(0xff303030),
-          elevation: 0,
-          title: const Text('Notes'),
-          actions: const [
-            Padding(
-              padding: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 16),
-              child: CustomIcon(icon: Icon(Icons.search)),
-            ),
-          ],
-        ),
-        body: const NotesViewBody(),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: kPrimryColor,
-          onPressed: () {
-            showModalBottomSheet(
-              isScrollControlled: true,
-              context: context,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16)),
-              builder: (context) {
-                return const AddNoteBottomSheet();
-              },
-            );
-          },
-          child: const Icon(Icons.add),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff303030),
+        elevation: 0,
+        title: const Text('Notes'),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(top: 8.0, bottom: 8.0, right: 16),
+            child: CustomIcon(icon: Icon(Icons.search)),
+          ),
+        ],
+      ),
+      body: const NotesViewBody(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: kPrimryColor,
+        onPressed: () {
+          showModalBottomSheet(
+            isScrollControlled: true,
+            context: context,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16)),
+            builder: (context) {
+              return const AddNoteBottomSheet();
+            },
+          );
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
